@@ -35,7 +35,7 @@ bundle install
 ```
 
 ### 3. Where to download the games.log file
-the file can be found at: https://gist.github.com/fabiosammy/ba973184e82e930043df8d4aa002bde4 
+The file can be found at: https://gist.github.com/fabiosammy/ba973184e82e930043df8d4aa002bde4 
 
 ### 4. How to test with Rspec
 #### Classification
