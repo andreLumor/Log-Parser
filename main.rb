@@ -5,6 +5,6 @@ unless ARGV.empty?
 else
 	raise "Must give file path as parameter"
 end
-parser = Log_Parser.new(file_path)
+parser = LogParser.new(file_path)
 puts parser.head
 parser.close
