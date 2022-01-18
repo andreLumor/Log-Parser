@@ -1,4 +1,4 @@
-require_relative '../lib/log_parser'
+require_relative '../../lib/log_parser'
 describe Log_Parser do
     it 'Returns the first line of the file when the method Log_Parser.lines is called' do
         l = Log_Parser.new('spec/test')
