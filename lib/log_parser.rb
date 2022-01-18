@@ -1,4 +1,4 @@
-class Log_Parser
+class LogParser
     def initialize(file_path)
         if File.file?(file_path)
             @file_path = file_path
