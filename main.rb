@@ -6,5 +6,5 @@ else
     raise "Must give file path as parameter"
 end
 parser = Log_Parser.new(file_path)
-puts parser.print_lines(1)
+puts parser.head
 parser.close
