@@ -13,7 +13,7 @@ class Log_Parser
     end
 
     def head()
-        lines = @log.readlines.map(&:chomp)[0]
+        lines = @log.first
         @log.seek(0)
         lines
 
