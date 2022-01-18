@@ -43,7 +43,7 @@ If you want to run the automatized tests with Rspec, please type as follows:
 ```
 bin/rspec
 ```
-ss
+
 ### 5. How to run 
 To run the main.rb, please type as follows:
 ```
