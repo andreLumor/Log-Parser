@@ -7,4 +7,3 @@ else
 end
 parser = LogParser.new(file_path)
 puts parser.head
-parser.close
