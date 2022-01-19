@@ -21,12 +21,16 @@ class LogParser
   def count
     File.open(@file_path, 'r') do |file|
       file.count
-    end 
+    end
   end
 
   def players
     @kills.keys
   end
+
+  #return kills hash
+  def kills
+    @kills  
 
   private
   def initialize_kills
@@ -52,7 +56,7 @@ class LogParser
       if line.split[1] == 'ClientUserinfoChanged:'
         player = line.split('\\')[1]
 
-        unless kills_hash.key?(player)
+        unless kills_hash.key?(player) #não consegui fazer unless de uma linha só
           kills_hash[player] = 0
         end
       end

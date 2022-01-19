@@ -9,7 +9,7 @@ end
 
 parser = LogParser.new(file_path)
 
-json_info = {"lines": parser.count, "players": parser.players}
+json_info = {"lines": parser.count, "players": parser.players, "kill": parser.kills}
 
 print file_path+": "
 
