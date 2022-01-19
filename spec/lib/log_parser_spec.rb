@@ -28,7 +28,7 @@ describe LogParser do
 
   describe '#kills' do
     it "Returns returns the hash {'player1': number_of_kills1, 'player2': number_of_kills2}" do
-        expect(log.kills).to be == {"Dono da Bola"=>3, "Isgalamido"=>3, "Zeh"=>1}
+        expect(log.kills).to be == {"Dono da Bola"=>0, "Isgalamido"=>-1, "Zeh"=>0}
     end
   end
 
