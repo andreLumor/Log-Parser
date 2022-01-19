@@ -34,7 +34,7 @@ describe LogParser do
 
   describe '#total_kills' do
     it 'Returns total of kills in the file' do
-        expect(log.total_kills).to be == 7
+        expect(log.total_kills).to be == 5
     end
   end
 end
