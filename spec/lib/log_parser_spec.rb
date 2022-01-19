@@ -21,8 +21,20 @@ describe LogParser do
   end
 
   describe '#players' do
-    it 'Returns number of lines of the file' do
-      expect(log.players).to be == ["Dono da Bola", "Isgalamido", "Zeh"]
+    it 'Returns number players in the log' do
+        expect(log.players).to be == ["Dono da Bola", "Isgalamido", "Zeh"]
+    end
+  end
+
+  describe '#kills' do
+    it "Returns returns the hash {'player1': number_of_kills1, 'player2': number_of_kills2}" do
+        expect(log.kills).to be == {"Dono da Bola"=>3, "Isgalamido"=>3, "Zeh"=>1}
+    end
+  end
+
+  describe '#total_kills' do
+    it 'Returns total of kills in the file' do
+        expect(log.total_kills).to be == 7
     end
   end
 end
