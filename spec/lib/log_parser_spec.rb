@@ -22,9 +22,7 @@ describe LogParser do
 
   describe '#players' do
     it 'Returns number of lines of the file' do
-        l = LogParser.new('spec/fixtures/dummy.log')
-        expect(l.players).to be == ["Dono da Bola", "Isgalamido", "Zeh"]
+      expect(log.players).to be == ["Dono da Bola", "Isgalamido", "Zeh"]
     end
   end
 end
-
