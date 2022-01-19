@@ -36,6 +36,17 @@ class LogParser
     }
   end
 
+  #return kills hash
+  def kills
+    @kills
+  end
+
+  #return kills total
+  def total_kills
+    @kills.values.sum
+  end
+
+  #read the file and returns the hash {"player1": number_of_kills1, "player2": number_of_kills2}
   private
   def initialize_score
     score_hash = {}
