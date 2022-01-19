@@ -10,27 +10,24 @@ class LogParser
     @kills = initialize_kills
   end
 
-  #retorna a primeira linha do arquivo
+  #return the first line of the log
   def head
     File.open(@file_path, 'r') do |file|
       file.first 
     end 
   end
 
-  #retorna o número de linhas do arquivo
+  #return the number of lines in the log
   def count
     File.open(@file_path, 'r') do |file|
       file.count
     end
   end
 
+  #return a list of players that are on the log
   def players
     @kills.keys
   end
-
-  #return kills hash
-  def kills
-    @kills  
 
   private
   def initialize_kills
