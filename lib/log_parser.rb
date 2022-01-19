@@ -29,7 +29,6 @@ class LogParser
     @score.keys
   end
 
-<<<<<<< HEAD
   def get_json
     json_info = {
       "lines": self.count, 
@@ -37,8 +36,6 @@ class LogParser
     }
   end
 
-=======
->>>>>>> Creating LogParser.kills and LogParser.total_kills
   #return kills hash
   def kills
     @kills
