@@ -1,5 +1,5 @@
-require_relative 'lib/log_parser.rb'
 require 'json'
+require_relative "lib/log_parser.rb"
 
 unless ARGV.empty?
   file_path = ARGV[0]

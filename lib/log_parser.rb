@@ -27,8 +27,11 @@ class LogParser
   def get_json
     json_info = {
       "lines": self.count, 
-      "players": self.players,  
+      "players": self.players,
+      "kills": self.kills, 
+      "total_kills": self.total_kills 
     }
+  end
 
   def players
     @score.except('<world>').keys
