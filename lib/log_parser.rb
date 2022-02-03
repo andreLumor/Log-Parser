@@ -16,7 +16,16 @@ class LogParser
       file.first 
     end 
   end
-
+  
+  def get_json
+    json_info = {
+      "lines": self.count, 
+      "players": self.players,  
+      "kills": self.kills, 
+      "total_kills": self.total_kills 
+    }
+  end
+  
   #return the number of lines in the log
   def count
     File.open(@file_path, 'r') do |file|
@@ -24,14 +33,6 @@ class LogParser
     end
   end
 
-  def get_json
-    json_info = {
-      "lines": self.count, 
-      "players": self.players,
-      "kills": self.kills, 
-      "total_kills": self.total_kills 
-    }
-  end
 
   def players
     @score.except('<world>').keys
@@ -40,7 +41,9 @@ class LogParser
 
   #return kills hash
   def kills
+
     @score.except('<world>')
+
   end
 
   #return kills total
@@ -66,15 +69,7 @@ class LogParser
         unless score_hash.key?(victm)
           score_hash[victm] = 0
         end
-
-        if killer == victm
-          score_hash[killer] -= 2 #taking 1 that was added and 1 for suicide
-        end
         
-        if killer == '<world>'
-          score_hash[victm] -= 1
-          score_hash[killer] += 1 #balancing kills total in score
-        end
       end
     
       if line.split[1] == 'ClientUserinfoChanged:'
