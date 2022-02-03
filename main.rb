@@ -1,5 +1,5 @@
-require_relative 'lib/log_parser.rb'
 require 'json'
+require_relative "lib/log_parser.rb"
 
 unless ARGV.empty?
   file_path = ARGV[0]
@@ -9,13 +9,7 @@ end
 
 parser = LogParser.new(file_path)
 
-json_info = {
-  "lines": parser.count, 
-  "players": parser.players, 
-  "kills": parser.kills, 
-  "total_kills": parser.total_kills 
-}
-
+json_info = parser.get_json
 print file_path+": "
 
 puts JSON.pretty_generate(json_info)

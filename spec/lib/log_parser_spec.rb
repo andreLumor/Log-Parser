@@ -28,13 +28,13 @@ describe LogParser do
 
   describe '#kills' do
     it "Returns returns the hash {'player1': number_of_kills1, 'player2': number_of_kills2}" do
-        expect(log.kills).to be == {"Dono da Bola"=>1, "Isgalamido"=>1, "Zeh"=>0}
+        expect(log.kills).to be == {"Dono da Bola"=>0, "Isgalamido"=>-1, "Zeh"=>0}
     end
   end
 
   describe '#total_kills' do
     it 'Returns total of kills in the file' do
-        expect(log.total_kills).to be == 2
+        expect(log.total_kills).to be == 5
     end
   end
 end

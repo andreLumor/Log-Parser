@@ -33,16 +33,17 @@ class LogParser
     end
   end
 
-  #return a list of players that are on the log
+
   def players
-    @score.keys
+    @score.except('<world>').keys
+
   end
-
-
 
   #return kills hash
   def kills
-    @score
+
+    @score.except('<world>')
+
   end
 
   #return kills total
@@ -50,7 +51,7 @@ class LogParser
     @score.values.sum
   end
 
-  #read the file and returns the hash {"player1": number_of_kills1, "player2": number_of_kills2}
+  #read the file and returns the hash {"player1": score1, "player2": score2}
   private
   def initialize_score
     score_hash = {}
@@ -79,7 +80,6 @@ class LogParser
         end
       end
     end
-    score_hash.delete('<world>')
     score_hash
   end
 
