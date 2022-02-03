@@ -19,4 +19,10 @@ describe LogParser do
       expect(log.count).to be == 33
     end
   end
+
+  describe '#players' do
+    it 'Returns number of lines of the file' do
+      expect(log.players).to be == ["Dono da Bola", "Isgalamido", "Zeh"]
+    end
+  end
 end
